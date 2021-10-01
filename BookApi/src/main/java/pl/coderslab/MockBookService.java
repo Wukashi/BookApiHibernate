@@ -37,14 +37,14 @@ public class MockBookService implements BookService{
     }
 
     @Override
-    public void delete(Long id) {
-        for (int i = 0; i < books.size(); i++) {
-            if(id.equals(books.get(i).getId()))
-            {
-                books.remove(i);
-                break;
-            }
-        }
+    public void delete(Book book) {
+//        for (int i = 0; i < books.size(); i++) {
+//            if(id.equals(books.get(i).getId()))
+//            {
+//                books.remove(i);
+//                break;
+//            }
+//        }
     }
 
     @Override

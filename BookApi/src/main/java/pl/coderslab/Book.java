@@ -1,11 +1,31 @@
 package pl.coderslab;
 
+import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+@Entity
+@Table(name = "books")
 public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
+    @Size(min = 5)
     private String isbn;
+    @NotBlank
+    @Size(min = 2)
     private String title;
+    @NotBlank
+    @Size(min = 2)
     private String author;
+    @NotBlank
+    @Size(min = 2)
     private String publisher;
+    @NotBlank
+    @Size(min = 2)
     private String type;
 
     public Book(Long id, String isbn, String title, String author, String publisher, String type) {
